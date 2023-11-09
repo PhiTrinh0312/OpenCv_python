@@ -25,8 +25,10 @@ else:
 
 height, width, channel = t_img.shape
 bottom_right = (top_left[0] + width, top_left[1] + height)
-cv2.rectangle(s_img, top_left, bottom_right, (255, 0, 0), 1)
+cv2.rectangle(s_img, top_left, bottom_right, (255, 0, 0), 3)
 
-cv2.imshow("anhgoc", s_img)
+cv2.imshow("image to find ", t_img)
+cv2.imshow("the original image ", s_img_copy)
+cv2.imshow("Original photo after finding it ", s_img)
 if cv2.waitKey(0) & 0xff == 27:
     cv2.destroyAllWindows()
